@@ -117,14 +117,6 @@ export default function ViewJHA({viewJha}) {
                 key={i}
                 >
                 <StyledTableCell>
-                    { !i ?
-                    <></> :
-                    <Tooltip title="Remove Step" sx={{position: 'absolute', top: '-7%', left: '-2%'}}>
-                      <IconButton>
-                          <DisabledByDefaultIcon sx={{color:'red'}}/>
-                      </IconButton>
-                    </Tooltip>
-                    }
                     <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                     <Typography variant="subtitle1" sx={{alignItems:'center', paddingRight:'10px', minWidth:'max-content'}}>
                         {i+1+'. '+steps[i]['s']}
