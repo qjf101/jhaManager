@@ -33,7 +33,7 @@ run this MySQL query to create the jhas table:
 Install dependencies:
 
 ```bash
-$ npm run i
+$ npm i
 $ npm run install-client
 ```
 
