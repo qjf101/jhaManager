@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <Nav tab={tab} setTab={setTab} setViewJha={setViewJha}/>
+      <Nav tab={tab} setTab={setTab} setEditJha={setEditJha} setViewJha={setViewJha}/>
       { viewJha ?
       <ViewJHA viewJha={viewJha}/>:
       <>

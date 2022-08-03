@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Tabs, Tab, Box } from '@mui/material';
 import styled from '@emotion/styled';
 
-export default function Nav({tab, setTab, setViewJha}) {
+export default function Nav({tab, setTab, setEditJha, setViewJha}) {
   const handleChange = (e, newValue) => {
     setTab(newValue);
   };
@@ -15,6 +15,11 @@ export default function Nav({tab, setTab, setViewJha}) {
     }
   });
 
+  const clearJha = () => {
+    setViewJha(null)
+    setEditJha(null)
+  };
+
   return (
     <Box sx={{ width: '100%'}}>
       <Tabs
@@ -26,8 +31,8 @@ export default function Nav({tab, setTab, setViewJha}) {
             backgroundColor: 'grey !important'
         }}
       >
-        <StyledTab label="Create New JHA" onClick={() => setViewJha(null)}/>
-        <StyledTab label="View All JHAs" onClick={() => setViewJha(null)}/>
+        <StyledTab label="Create New JHA" onClick={() => clearJha()}/>
+        <StyledTab label="View All JHAs" onClick={() => clearJha()}/>
       </Tabs>
     </Box>
   );
